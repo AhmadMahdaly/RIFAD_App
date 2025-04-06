@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rifad/screens/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'RIFAD',
-          home: Scaffold(),
+          home: SplashScreen(),
         ),
       ),
     );
