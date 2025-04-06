@@ -6,10 +6,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenUtilInit(
-      designSize: Size(393, 852),
+    return ScreenUtilInit(
+      designSize: const Size(393, 852),
       minTextAdapt: true,
-      child: MaterialApp(title: 'RIFAD', home: Scaffold()),
+
+      /// Remove focus from any input element
+      child: GestureDetector(
+        onTap: () {
+          final currentFocus = FocusScope.of(context);
+          if (!currentFocus.hasPrimaryFocus &&
+              currentFocus.focusedChild != null) {
+            currentFocus.unfocus();
+          }
+        },
+        child: const MaterialApp(title: 'RIFAD', home: Scaffold()),
+      ),
     );
   }
 }
