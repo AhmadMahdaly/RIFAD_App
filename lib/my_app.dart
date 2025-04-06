@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
             currentFocus.unfocus();
           }
         },
-        child: const MaterialApp(title: 'RIFAD', home: Scaffold()),
+        child: const MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'RIFAD',
+          home: Scaffold(),
+        ),
       ),
     );
   }
