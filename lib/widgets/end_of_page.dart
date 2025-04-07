@@ -3,16 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rifad/utils/constants/colors_constants.dart';
 
 class EndOfPage extends StatelessWidget {
-  const EndOfPage({required this.child, super.key});
-  final Widget child;
+  const EndOfPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Stack(
       fit: StackFit.expand,
       alignment: AlignmentDirectional.center,
       children: [
-        child,
-
         Positioned(
           bottom: 80.h,
           right: -41.w,
