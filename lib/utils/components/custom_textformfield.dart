@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rifad/utils/constants/colors_constants.dart';
 
 class CustomTextformfield extends StatelessWidget {
   const CustomTextformfield({
@@ -40,8 +41,8 @@ class CustomTextformfield extends StatelessWidget {
       textInputAction: textInputAction,
       autofillHints: autofillHints,
       enabled: enabled,
-      cursorWidth: 0.5.sp,
-      cursorColor: const Color(0xFFD6D6D6),
+      cursorWidth: 1.sp,
+      cursorColor: kMainColor,
       inputFormatters: inputFormatters,
       minLines: 1,
       maxLines: maxLines,
@@ -55,14 +56,17 @@ class CustomTextformfield extends StatelessWidget {
         contentPadding: contentPadding,
         hintText: text,
         hintStyle: TextStyle(
-          fontSize: 14.sp,
+          fontSize: 15.sp,
           color: const Color(0xFF494949),
           fontWeight: FontWeight.w300,
         ),
         suffixIcon: passwordIcon,
         prefixIcon: icon,
         border: border(),
-        focusedBorder: border(),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.sp),
+          borderSide: const BorderSide(color: kMainColor),
+        ),
         enabledBorder: border(),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.sp),

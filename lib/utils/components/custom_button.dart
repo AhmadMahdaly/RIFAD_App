@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rifad/utils/constants/colors_constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -20,12 +21,12 @@ class CustomButton extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: padding.w),
         alignment: Alignment.center,
         width: double.infinity,
-        height: 60.h,
+        height: 62.h,
         decoration: ShapeDecoration(
           gradient: const LinearGradient(
             begin: Alignment(1, 0.50),
             end: Alignment(0, 0.50),
-            colors: [Color(0xFF3E017F), Color(0xFF5601AF)],
+            colors: [kSecondaryColor, kMainColor],
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
@@ -35,9 +36,9 @@ class CustomButton extends StatelessWidget {
           text,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 20.sp,
+            fontSize: 21.sp,
             fontWeight: FontWeight.w300,
-            height: 1.35,
+            height: 1.35.h,
           ),
         ),
       ),
