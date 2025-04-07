@@ -18,12 +18,14 @@ class CustomTextformfield extends StatelessWidget {
     this.enabled = true,
     this.textInputAction,
     this.autofillHints,
+    this.passwordIcon,
   });
   final String? text;
   final TextInputType? keyboardType;
   final bool obscureText;
   final void Function(String)? onChanged;
   final Widget? icon;
+  final Widget? passwordIcon;
   final String? Function(String?)? validator;
   final EdgeInsetsGeometry? contentPadding;
   final TextEditingController? controller;
@@ -53,11 +55,12 @@ class CustomTextformfield extends StatelessWidget {
         contentPadding: contentPadding,
         hintText: text,
         hintStyle: TextStyle(
-          fontSize: 12.sp,
+          fontSize: 14.sp,
           color: const Color(0xFF494949),
           fontWeight: FontWeight.w300,
         ),
-        suffixIcon: icon,
+        suffixIcon: passwordIcon,
+        prefixIcon: icon,
         border: border(),
         focusedBorder: border(),
         enabledBorder: border(),
