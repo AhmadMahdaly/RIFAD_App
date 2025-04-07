@@ -4,6 +4,7 @@ import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:rifad/screens/confirm_login/widget/confirm_card_login_number_widget.dart';
 import 'package:rifad/screens/confirm_login/widget/custom_timer_widget.dart';
 import 'package:rifad/screens/confirm_login/widget/title_of_confirm_login_widget.dart';
+import 'package:rifad/screens/home_page/home_page.dart';
 import 'package:rifad/utils/components/custom_button.dart';
 import 'package:rifad/utils/components/height.dart';
 import 'package:rifad/utils/constants/colors_constants.dart';
@@ -103,11 +104,11 @@ class _ConfirmLoginScreenState extends State<ConfirmLoginScreen> {
                   isActive: code != null,
                   text: 'تأكيد',
                   onTap: () {
-                    if (code != null) {
+                    if (code != null && code!.length == 6 && code == '111111') {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ConfirmLoginScreen(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                     }
