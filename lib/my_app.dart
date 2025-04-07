@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rifad/screens/splash_screen/splash_screen.dart';
@@ -30,6 +31,11 @@ class MyApp extends StatelessWidget {
               context,
             ).textTheme.apply(fontFamily: 'GE SS Two'),
           ),
+
+          /// Localizations
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
           home: const SplashScreen(),
         ),
       ),
