@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rifad/screens/splash_screen.dart';
+import 'package:rifad/utils/constants/colors_constants.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -20,10 +21,16 @@ class MyApp extends StatelessWidget {
             currentFocus.unfocus();
           }
         },
-        child: const MaterialApp(
+        child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'RIFAD',
-          home: SplashScreen(),
+          theme: ThemeData(
+            scaffoldBackgroundColor: kScaffoldBackgroundColor,
+            textTheme: Theme.of(
+              context,
+            ).textTheme.apply(fontFamily: 'GE SS Two'),
+          ),
+          home: const SplashScreen(),
         ),
       ),
     );
