@@ -33,6 +33,8 @@ flutter:
     - assets/images/
     - assets/translations/
     - assets/svg/
+    - assets/images/endOfPage.png
+    - assets/images/recaptcha.png
 
 
   fonts:
