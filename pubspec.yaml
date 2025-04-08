@@ -41,6 +41,7 @@ flutter:
     - assets/images/endOfPage.png
     - assets/images/recaptcha.png
     - assets/icons/Frame 1.png
+    - .env
 
 
   fonts:
