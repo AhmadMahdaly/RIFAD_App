@@ -1,126 +1,93 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:rifad/core/utils/components/height.dart';
-import 'package:rifad/core/utils/components/width.dart';
 import 'package:rifad/core/utils/constants/colors_constants.dart';
-import 'package:rifad/cubit/auth_cubit/auth_cubit.dart';
-import 'package:rifad/screens/login/login_screen.dart';
+import 'package:rifad/cubit/date_and_time_cubit/date_cubit.dart';
+import 'package:rifad/cubit/date_and_time_cubit/time_cubit.dart';
+import 'package:rifad/screens/home_page/widgets/analysis_buttons/custom_container.dart';
+import 'package:rifad/screens/home_page/widgets/analysis_buttons/dart_container.dart';
+import 'package:rifad/screens/home_page/widgets/analysis_circular_percent.dart';
+import 'package:rifad/screens/home_page/widgets/custom_dropdown_button/dropdown_line.dart';
+import 'package:rifad/screens/home_page/widgets/date_and_time.dart';
+import 'package:rifad/screens/home_page/widgets/head_text_title.dart';
+import 'package:rifad/screens/home_page/widgets/welcome_to_user.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.manual,
-      overlays: SystemUiOverlay.values,
-    );
-
-    return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          RotatedBox(
-            quarterTurns: 2,
-            child: IconButton(
-              onPressed: () {
-                try {
-                  BlocProvider.of<AuthCubit>(context).logout();
-                  Navigator.pushAndRemoveUntil(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LoginScreen(),
-                    ),
-                    (route) => false,
-                  );
-                } catch (e) {
-                  showDialog<String>(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: const Text('خطأ'),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.of(context).pop(),
-                            child: const Text('موافق'),
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                }
-              },
-              icon: const Icon(Icons.exit_to_app),
-            ),
-          ),
-        ],
-      ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                height: 30.h,
-                width: 160.w,
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<TimeCubit>(create: (context) => TimeCubit()),
+        BlocProvider<DateCubit>(create: (context) => DateCubit()),
+      ],
+      child: Scaffold(
+        appBar: AppBar(automaticallyImplyLeading: false, toolbarHeight: 40.h),
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 25.w),
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: 16.h,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const WelcomeToUser(),
+                const DateAndTime(),
+                const H(h: 10),
+                const HeadTitle(title: 'نظرة عامة'),
+                const DropdownLine(),
+                Row(
+                  spacing: 12.w,
                   children: [
-                    Image.asset('assets/images/logo.png'),
-                    Image.asset('assets/images/text logo.png'),
+                    const Expanded(child: DartContainer()),
+                    Expanded(
+                      child: CustomContainer(
+                        icon: SvgPicture.asset('assets/svg/kaaba 1.svg'),
+                        text: 'إجمالي عدد الحجاج',
+                        num: 34678,
+                      ),
+                    ),
                   ],
                 ),
-              ),
-            ),
-            const H(h: 20),
-            Row(
-              children: [
-                Container(
-                  width: 60.w,
-                  height: 60.h,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(320.r),
-                  ),
-                  child: Image.asset(
-                    'assets/images/user.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                W(w: 10.w),
-                Column(
+                Row(
+                  spacing: 12.w,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'أهلا بك',
-                      style: TextStyle(
-                        color: kMainColor,
-                        fontSize: 13.sp,
-                        fontWeight: FontWeight.w500,
-                        height: 1.23.h,
+                    const Expanded(
+                      child: CustomContainer(
+                        icon: Icon(
+                          Icons.check_circle_outline_rounded,
+                          color: kMainColor,
+                        ),
+                        text: 'إجمالي الواصلين',
+                        num: 34678,
                       ),
                     ),
-                    const H(h: 10),
-                    Text(
-                      'عبدالله محمد',
-                      style: TextStyle(
-                        color: kTextColor,
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w300,
-                        height: 1.14.h,
+                    const Expanded(
+                      child: CustomContainer(
+                        icon: Icon(Icons.timelapse, color: kMainColor),
+                        text: 'إجمالي المتبقين',
+                        num: 34678,
+                      ),
+                    ),
+                    Expanded(
+                      child: CustomContainer(
+                        icon: SvgPicture.asset('assets/svg/sign-out-alt.svg'),
+                        text: 'إجمالي من تم إخلاؤهم',
+                        num: 34678,
                       ),
                     ),
                   ],
                 ),
+                const H(h: 10),
+                const HeadTitle(title: 'تقارير الحجاج'),
+                const AnalysisCircularPercentWidget(),
+                const H(h: 10),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
