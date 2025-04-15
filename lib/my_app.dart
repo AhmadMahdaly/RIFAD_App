@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rifad/core/themes/app_theme.dart';
 import 'package:rifad/cubit/auth_cubit/auth_cubit.dart';
 import 'package:rifad/screens/splash_screen/splash_screen.dart';
-import 'package:rifad/utils/constants/colors_constants.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -29,16 +29,7 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'RIFAD',
-            theme: ThemeData(
-              appBarTheme: const AppBarTheme(
-                color: kScaffoldBackgroundColor,
-                iconTheme: IconThemeData(color: kMainColor),
-              ),
-              scaffoldBackgroundColor: kScaffoldBackgroundColor,
-              textTheme: Theme.of(
-                context,
-              ).textTheme.apply(fontFamily: 'GE SS Two'),
-            ),
+            theme: appTheme(context),
 
             /// Localizations
             localizationsDelegates: context.localizationDelegates,
