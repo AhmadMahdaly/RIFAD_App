@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rifad/core/utils/components/width.dart';
 import 'package:rifad/core/utils/constants/colors_constants.dart';
 import 'package:rifad/screens/home_page/home_page.dart';
-import 'package:rifad/screens/home_page/more_page/more_page.dart';
+import 'package:rifad/screens/more_page/more_page.dart';
 import 'package:rifad/screens/navigation_bar/widgets/select_icon_style.dart';
 import 'package:rifad/screens/navigation_bar/widgets/tab_item_name.dart';
 
