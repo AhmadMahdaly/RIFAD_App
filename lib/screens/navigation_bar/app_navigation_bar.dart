@@ -91,7 +91,7 @@ class _AppNavigationBarState extends State<AppNavigationBar> {
             label: '',
           ),
 
-          /// Wishlist button
+          /// More button
           BottomNavigationBarItem(
             icon:
                 _currentIndex == 1
