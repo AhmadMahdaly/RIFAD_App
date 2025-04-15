@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rifad/utils/components/textfield_border_radius.dart';
 import 'package:rifad/utils/constants/colors_constants.dart';
 
 class CustomTextformfield extends StatelessWidget {
@@ -53,7 +54,6 @@ class CustomTextformfield extends StatelessWidget {
       inputFormatters: inputFormatters,
       minLines: 1,
       maxLines: maxLines,
-      textAlignVertical: TextAlignVertical.top,
       controller: controller,
       autovalidateMode: AutovalidateMode.onUnfocus,
       validator: validator,
@@ -67,27 +67,13 @@ class CustomTextformfield extends StatelessWidget {
           color: const Color(0xFF494949),
           fontWeight: FontWeight.w300,
         ),
-
         suffixIcon: passwordIcon,
         prefixIcon: icon,
-        border: border(),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.sp),
-          borderSide: const BorderSide(color: kMainColor),
-        ),
-        enabledBorder: border(),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.sp),
-          borderSide: const BorderSide(color: Colors.red),
-        ),
+        border: textfieldBorderRadius(const Color(0xFFD6D6D6)),
+        focusedBorder: textfieldBorderRadius(kMainColor),
+        enabledBorder: textfieldBorderRadius(const Color(0xFFD6D6D6)),
+        focusedErrorBorder: textfieldBorderRadius(Colors.red),
       ),
     );
   }
-}
-
-OutlineInputBorder border() {
-  return OutlineInputBorder(
-    borderRadius: BorderRadius.circular(8.sp),
-    borderSide: const BorderSide(color: Color(0xFFD6D6D6)),
-  );
 }
