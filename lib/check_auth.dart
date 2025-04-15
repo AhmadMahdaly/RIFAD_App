@@ -6,7 +6,7 @@ import 'package:rifad/screens/login/login_screen.dart';
 class CheckAuth extends StatelessWidget {
   const CheckAuth({super.key});
 
-  final FlutterSecureStorage storage = const FlutterSecureStorage();
+  static const storage = FlutterSecureStorage();
   Future<bool> checkLogin() async {
     final token = await storage.read(key: 'access_token');
     return token != null;

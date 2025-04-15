@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:rifad/cubit/auth_cubit/auth_states.dart';
@@ -10,13 +10,13 @@ class AuthCubit extends Cubit<AuthStates> {
   AuthCubit() : super(LoginInitialState());
 
   final dio = Dio();
-  final storage = FlutterSecureStorage();
+  static const storage = FlutterSecureStorage();
 
   final String baseUrlLogin = dotenv.env['BASEURLLOGIN'] ?? '';
   final String baseUrlLoginWithCode = dotenv.env['BASEURLLOGINWITHCODE'] ?? '';
   Future<void> login({
-    required String phoneNumber,
-    required String identityNumber,
+    required String password,
+    required String userName,
   }) async {
     emit(LoginLoadingState());
     try {
@@ -29,8 +29,8 @@ class AuthCubit extends Cubit<AuthStates> {
         baseUrlLogin,
         data: json.encode({
           'companyId': dotenv.env['COMPANYID'] ?? '',
-          'identityNumber': identityNumber,
-          'phoneNumber': phoneNumber,
+          'identityNumber': userName,
+          'phoneNumber': password,
         }),
         options: Options(headers: headers),
       );
