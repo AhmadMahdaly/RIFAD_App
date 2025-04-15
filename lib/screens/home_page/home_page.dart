@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rifad/core/utils/components/height.dart';
+import 'package:rifad/core/utils/components/width.dart';
+import 'package:rifad/core/utils/constants/colors_constants.dart';
 import 'package:rifad/cubit/auth_cubit/auth_cubit.dart';
 import 'package:rifad/screens/login/login_screen.dart';
-import 'package:rifad/utils/components/height.dart';
-import 'package:rifad/utils/components/width.dart';
-import 'package:rifad/utils/constants/colors_constants.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

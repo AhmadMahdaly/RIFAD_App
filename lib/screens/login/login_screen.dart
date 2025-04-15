@@ -3,18 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:rifad/core/utils/components/custom_button.dart';
+import 'package:rifad/core/utils/components/custom_textformfield.dart';
+import 'package:rifad/core/utils/components/height.dart';
+import 'package:rifad/core/utils/components/width.dart';
+import 'package:rifad/core/utils/constants/colors_constants.dart';
+import 'package:rifad/core/widgets/end_of_page.dart';
 import 'package:rifad/cubit/auth_cubit/auth_cubit.dart';
 import 'package:rifad/cubit/auth_cubit/auth_states.dart';
 import 'package:rifad/screens/confirm_login/confirm_login_screen.dart';
 import 'package:rifad/screens/login/widgets/app_welcome_widget.dart';
 import 'package:rifad/screens/login/widgets/forget_password_widget.dart';
 import 'package:rifad/screens/login/widgets/title_of_welcome_page_widget.dart';
-import 'package:rifad/utils/components/custom_button.dart';
-import 'package:rifad/utils/components/custom_textformfield.dart';
-import 'package:rifad/utils/components/height.dart';
-import 'package:rifad/utils/components/width.dart';
-import 'package:rifad/utils/constants/colors_constants.dart';
-import 'package:rifad/widgets/end_of_page.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

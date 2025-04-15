@@ -8,7 +8,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await dotenv.load();
-  // Set the preferred orientations to portrait only
+
+  /// Set the preferred orientations to portrait only
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
@@ -17,7 +18,6 @@ void main() async {
       EasyLocalization(
         supportedLocales: const [Locale('en'), Locale('ar')],
         path: 'assets/translations',
-        // fallbackLocale: const Locale('ar'),
         startLocale: const Locale('ar'),
         child: const MyApp(),
       ),

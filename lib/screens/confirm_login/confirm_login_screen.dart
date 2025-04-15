@@ -3,16 +3,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:rifad/core/utils/components/custom_button.dart';
+import 'package:rifad/core/utils/components/height.dart';
+import 'package:rifad/core/utils/constants/colors_constants.dart';
+import 'package:rifad/core/widgets/end_of_page.dart';
 import 'package:rifad/cubit/auth_cubit/auth_cubit.dart';
 import 'package:rifad/cubit/auth_cubit/auth_states.dart';
 import 'package:rifad/screens/confirm_login/widget/confirm_card_login_number_widget.dart';
 import 'package:rifad/screens/confirm_login/widget/custom_timer_widget.dart';
 import 'package:rifad/screens/confirm_login/widget/title_of_confirm_login_widget.dart';
 import 'package:rifad/screens/home_page/home_page.dart';
-import 'package:rifad/utils/components/custom_button.dart';
-import 'package:rifad/utils/components/height.dart';
-import 'package:rifad/utils/constants/colors_constants.dart';
-import 'package:rifad/widgets/end_of_page.dart';
 
 class ConfirmLoginScreen extends StatefulWidget {
   const ConfirmLoginScreen({

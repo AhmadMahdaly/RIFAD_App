@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rifad/utils/components/textfield_border_radius.dart';
-import 'package:rifad/utils/constants/colors_constants.dart';
+import 'package:rifad/core/utils/components/textfield_border_radius.dart';
+import 'package:rifad/core/utils/constants/colors_constants.dart';
 
 class CustomTextformfield extends StatelessWidget {
   const CustomTextformfield({
