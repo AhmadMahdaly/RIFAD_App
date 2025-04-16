@@ -33,7 +33,7 @@ class CustomSearchBarAndDownloadButton extends StatelessWidget {
         ),
         Container(
           width: 46.w,
-          height: 54.h,
+          height: 46.h,
           padding: const EdgeInsets.all(5.16),
           decoration: ShapeDecoration(
             color: const Color(0xFF6400CA),
