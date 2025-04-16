@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rifad/core/utils/components/height.dart';
 import 'package:rifad/core/utils/components/width.dart';
+import 'package:rifad/core/utils/constants/colors_constants.dart';
 
 class UserNameAndNumberAndLogOutButtonHeader extends StatelessWidget {
   const UserNameAndNumberAndLogOutButtonHeader({super.key});
@@ -57,7 +58,7 @@ class UserNameAndNumberAndLogOutButtonHeader extends StatelessWidget {
             ),
             shadows: const [
               BoxShadow(
-                color: Color(0x0C000000),
+                color: kShadowColor,
                 blurRadius: 20,
                 offset: Offset(4, 8),
               ),
