@@ -21,7 +21,10 @@ class CustomTextformfield extends StatelessWidget {
     this.textInputAction,
     this.autofillHints,
     this.passwordIcon,
+    this.textDirection = TextDirection.ltr,
+    this.fontSize = 14,
   });
+  final double? fontSize;
   final String? text;
   final TextInputType? keyboardType;
   final bool obscureText;
@@ -36,10 +39,11 @@ class CustomTextformfield extends StatelessWidget {
   final bool? enabled;
   final TextInputAction? textInputAction;
   final Iterable<String>? autofillHints;
+  final TextDirection? textDirection;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      textDirection: TextDirection.ltr,
+      textDirection: textDirection,
       style: TextStyle(
         fontSize: 15.sp,
         color: const Color(0xFF494949),
@@ -63,7 +67,7 @@ class CustomTextformfield extends StatelessWidget {
         contentPadding: contentPadding,
         hintText: text,
         hintStyle: TextStyle(
-          fontSize: 15.sp,
+          fontSize: fontSize!.sp,
           color: const Color(0xFF494949),
           fontWeight: FontWeight.w300,
         ),
