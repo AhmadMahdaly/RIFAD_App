@@ -17,6 +17,7 @@ class TransportPhaseTimesPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: () => Navigator.pop(context),
         ),
+        toolbarHeight: 100.h,
         title: Text(
           'حصص مراحل النقل',
           style: TextStyle(
@@ -35,9 +36,40 @@ class TransportPhaseTimesPage extends StatelessWidget {
             ),
           ),
         ],
+
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(60.h),
-          child: const CustomSearchBarAndDownloadButton(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 12.h,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                child: Row(
+                  spacing: 6.w,
+                  children: [
+                    SvgPicture.asset(
+                      'assets/svg/kaaba 1.svg',
+                      colorFilter: const ColorFilter.mode(
+                        Color(0xFF303030),
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                    Text(
+                      'موسم حج 1446 هـ',
+                      style: TextStyle(
+                        color: const Color(0xFF303030),
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w500,
+                        height: 1.25.h,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const CustomSearchBarAndDownloadButton(),
+            ],
+          ),
         ),
       ),
       body: const TransportPhaseTimesBody(),
