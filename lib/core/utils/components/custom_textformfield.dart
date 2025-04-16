@@ -68,7 +68,7 @@ class CustomTextformfield extends StatelessWidget {
         hintText: text,
         hintStyle: TextStyle(
           fontSize: fontSize!.sp,
-          color: const Color(0xFF494949),
+          color: const Color(0xFFA2A2A2),
           fontWeight: FontWeight.w300,
         ),
         suffixIcon: passwordIcon,
