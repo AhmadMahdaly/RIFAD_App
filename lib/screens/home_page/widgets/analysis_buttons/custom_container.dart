@@ -24,7 +24,7 @@ class CustomContainer extends StatelessWidget {
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x19000000),
+            color: kShadowColor,
             blurRadius: 4,
             offset: Offset(0, 2),
             spreadRadius: 0,

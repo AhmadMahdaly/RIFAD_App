@@ -7,7 +7,7 @@ import 'package:rifad/core/utils/constants/colors_constants.dart';
 import 'package:rifad/cubit/date_and_time_cubit/date_cubit.dart';
 import 'package:rifad/cubit/date_and_time_cubit/time_cubit.dart';
 import 'package:rifad/screens/home_page/widgets/analysis_buttons/custom_container.dart';
-import 'package:rifad/screens/home_page/widgets/analysis_buttons/dart_container.dart';
+import 'package:rifad/screens/home_page/widgets/analysis_buttons/dark_container.dart';
 import 'package:rifad/screens/home_page/widgets/analysis_circular_percent.dart';
 import 'package:rifad/screens/home_page/widgets/custom_dropdown_button/dropdown_line.dart';
 import 'package:rifad/screens/home_page/widgets/date_and_time.dart';
@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                 Row(
                   spacing: 12.w,
                   children: [
-                    const Expanded(child: DartContainer()),
+                    const Expanded(child: DarkContainer()),
                     Expanded(
                       child: CustomContainer(
                         icon: SvgPicture.asset('assets/svg/kaaba 1.svg'),

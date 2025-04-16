@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rifad/core/utils/constants/colors_constants.dart';
 
-class DartContainer extends StatelessWidget {
-  const DartContainer({super.key});
+class DarkContainer extends StatelessWidget {
+  const DarkContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class DartContainer extends StatelessWidget {
         ),
         shadows: const [
           BoxShadow(
-            color: Color(0x3F000000),
+            color: kShadowColor,
             blurRadius: 4,
             offset: Offset(0, 2),
             spreadRadius: 0,
