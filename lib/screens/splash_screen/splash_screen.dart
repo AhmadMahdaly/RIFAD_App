@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rifad/check_auth.dart';
 import 'package:rifad/core/widgets/end_of_page.dart';
 import 'package:rifad/cubit/auth_cubit/auth_cubit.dart';
+import 'package:rifad/screens/navigation_bar/app_navigation_bar.dart';
 import 'package:rifad/screens/splash_screen/widgets/splash_logo.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const CheckAuth()),
+        MaterialPageRoute(builder: (context) => const AppNavigationBar()),
       );
     });
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
