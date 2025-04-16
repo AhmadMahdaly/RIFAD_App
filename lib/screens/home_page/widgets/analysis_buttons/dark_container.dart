@@ -32,9 +32,15 @@ class DarkContainer extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
-        spacing: 10.h,
+        spacing: 6.h,
         children: [
-          SvgPicture.asset('assets/svg/ion_bus-outline.svg'),
+          SvgPicture.asset(
+            'assets/svg/ion_bus-outline.svg',
+            colorFilter: const ColorFilter.mode(
+              kScaffoldBackgroundColor,
+              BlendMode.srcIn,
+            ),
+          ),
           SizedBox(
             height: 46.h,
             child: Center(

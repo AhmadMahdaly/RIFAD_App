@@ -32,7 +32,7 @@ class CustomContainer extends StatelessWidget {
         ],
       ),
       child: Column(
-        spacing: 10.h,
+        spacing: 6.h,
         children: [
           icon,
           SizedBox(
