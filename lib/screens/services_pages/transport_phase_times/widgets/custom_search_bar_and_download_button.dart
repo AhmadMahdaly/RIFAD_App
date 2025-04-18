@@ -34,11 +34,11 @@ class CustomSearchBarAndDownloadButton extends StatelessWidget {
         Container(
           width: 46.w,
           height: 46.h,
-          padding: const EdgeInsets.all(5.16),
+          padding: EdgeInsets.all(5.sp),
           decoration: ShapeDecoration(
-            color: const Color(0xFF6400CA),
+            color: kMainColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(8.r),
             ),
           ),
           child: IconButton(

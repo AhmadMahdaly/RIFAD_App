@@ -16,6 +16,7 @@ class _StationWidgetState extends State<StationWidget> {
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
+      borderRadius: BorderRadius.circular(8.r),
       isExpanded: true,
       dropdownColor: kScaffoldBackgroundColor,
       hint: Text(

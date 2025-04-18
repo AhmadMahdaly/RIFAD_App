@@ -10,7 +10,7 @@ class AnalysisCircularPercentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 358,
+      width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 36.w),
       decoration: ShapeDecoration(
         color: kMainColorLightColor,

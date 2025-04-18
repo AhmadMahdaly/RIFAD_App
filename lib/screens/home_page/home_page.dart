@@ -8,7 +8,6 @@ import 'package:rifad/cubit/date_and_time_cubit/date_cubit.dart';
 import 'package:rifad/cubit/date_and_time_cubit/time_cubit.dart';
 import 'package:rifad/screens/home_page/widgets/analysis_buttons/custom_container.dart';
 import 'package:rifad/screens/home_page/widgets/analysis_buttons/dark_container.dart';
-import 'package:rifad/screens/home_page/widgets/analysis_circular_percent.dart';
 import 'package:rifad/screens/home_page/widgets/custom_dropdown_button/dropdown_line.dart';
 import 'package:rifad/screens/home_page/widgets/date_and_time.dart';
 import 'package:rifad/screens/home_page/widgets/head_text_title.dart';
@@ -35,7 +34,7 @@ class HomePage extends StatelessWidget {
               children: [
                 const WelcomeToUser(),
                 const DateAndTime(),
-                const H(h: 10),
+                const H(h: 2),
                 const HeadTitle(title: 'نظرة عامة'),
                 const DropdownLine(),
                 Row(
@@ -81,9 +80,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const H(h: 10),
-                const HeadTitle(title: 'تقارير الحجاج'),
-                const AnalysisCircularPercentWidget(),
+                // const H(h: 2),
+                // const HeadTitle(title: 'تقارير الحجاج'),
+                // const AnalysisCircularPercentWidget(),
                 const H(h: 10),
               ],
             ),

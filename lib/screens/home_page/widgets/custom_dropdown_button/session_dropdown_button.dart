@@ -11,16 +11,16 @@ class SessionWidget extends StatefulWidget {
 }
 
 class _SessionWidgetState extends State<SessionWidget> {
-  final List<String> sessions = ['موسم حج 1446', 'موسم حج 1447'];
+  final List<String> sessions = ['موسم حج 1447'];
   String? selectedSession;
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
+      borderRadius: BorderRadius.circular(8.r),
       isExpanded: true,
       dropdownColor: kScaffoldBackgroundColor,
       hint: Text(
-        'الموسم',
-        // sessions.first,
+        sessions.last,
         style: TextStyle(
           color: kMainColor,
           fontSize: 15.sp,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:rifad/core/utils/components/width.dart';
 import 'package:rifad/core/utils/constants/colors_constants.dart';
 import 'package:rifad/screens/services_pages/add_station/add_station_page.dart';
 import 'package:rifad/screens/services_pages/show_station/show_station_page.dart';
@@ -18,7 +19,7 @@ PopupMenuButton<String> editAndDeletePopupMenuButton(BuildContext context) {
       if (value == 'show') {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const ShowStation()),
+          MaterialPageRoute(builder: (context) => const ShowStationPage()),
         );
       } else if (value == 'edit') {
       } else {
@@ -42,7 +43,8 @@ PopupMenuButton<String> editAndDeletePopupMenuButton(BuildContext context) {
                   BlendMode.srcIn,
                 ),
               ),
-              const SizedBox(width: 8),
+
+              W(w: 8.w),
               Text(
                 'مشاهدة',
                 textAlign: TextAlign.center,
@@ -68,7 +70,7 @@ PopupMenuButton<String> editAndDeletePopupMenuButton(BuildContext context) {
                   BlendMode.srcIn,
                 ),
               ),
-              const SizedBox(width: 8),
+              W(w: 8.w),
               Text(
                 'تعديل',
                 textAlign: TextAlign.center,
@@ -94,7 +96,7 @@ PopupMenuButton<String> editAndDeletePopupMenuButton(BuildContext context) {
                   BlendMode.srcIn,
                 ),
               ),
-              const SizedBox(width: 8),
+              W(w: 8.w),
               Text(
                 'إضافة',
                 textAlign: TextAlign.center,

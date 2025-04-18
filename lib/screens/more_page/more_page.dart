@@ -17,7 +17,7 @@ class MorePage extends StatelessWidget {
           width: double.infinity,
           fit: BoxFit.cover,
         ),
-        toolbarHeight: 120.h,
+        toolbarHeight: 90.h,
         title: const UserNameAndNumberAndLogOutButtonHeader(),
       ),
       body: const MorePageBody(),

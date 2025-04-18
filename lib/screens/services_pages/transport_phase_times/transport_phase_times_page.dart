@@ -51,14 +51,14 @@ class TransportPhaseTimesPage extends StatelessWidget {
                     SvgPicture.asset(
                       'assets/svg/kaaba 1.svg',
                       colorFilter: const ColorFilter.mode(
-                        Color(0xFF303030),
+                        kGrayColor,
                         BlendMode.srcIn,
                       ),
                     ),
                     Text(
                       'موسم حج 1446 هـ',
                       style: TextStyle(
-                        color: const Color(0xFF303030),
+                        color: kGrayColor,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w500,
                         height: 1.25.h,

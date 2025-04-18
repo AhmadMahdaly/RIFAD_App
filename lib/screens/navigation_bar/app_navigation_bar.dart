@@ -50,18 +50,17 @@ class _AppNavigationBarState extends State<AppNavigationBar> {
         unselectedItemColor: kTextColor,
         selectedLabelStyle: const TextStyle(
           /// To control height of Nav.bar
-          fontSize: 0,
+          fontSize: 2,
           fontWeight: FontWeight.bold,
         ),
         unselectedLabelStyle: const TextStyle(
-          color: kTextColor,
-
           /// To control height of Nav.bar
-          fontSize: 0,
+          fontSize: 2,
+          color: kTextColor,
           fontWeight: FontWeight.w400,
         ),
         elevation: 0,
-        iconSize: 24.sp,
+        iconSize: 50.sp,
         type: BottomNavigationBarType.shifting,
         items: [
           /// Home button

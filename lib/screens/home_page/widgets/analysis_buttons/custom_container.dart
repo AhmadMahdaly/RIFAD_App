@@ -15,7 +15,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 4.w),
       decoration: ShapeDecoration(
         color: kMainColorLightColor,

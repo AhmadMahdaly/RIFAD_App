@@ -4,7 +4,7 @@ import 'package:rifad/core/utils/components/width.dart';
 import 'package:rifad/core/utils/constants/colors_constants.dart';
 import 'package:rifad/core/widgets/filter_button/filter_button.dart';
 import 'package:rifad/core/widgets/sort_button/sort_button.dart';
-import 'package:rifad/screens/services_pages/transport_phase_times/widgets/edit_and_delete_popup_menu_button.dart';
+import 'package:rifad/screens/services_pages/transport_phase_times/widgets/transport_data_card.dart';
 
 class TransportPhaseTimesBody extends StatelessWidget {
   const TransportPhaseTimesBody({super.key});
@@ -60,62 +60,17 @@ class TransportPhaseTimesBody extends StatelessWidget {
                 itemBuilder: (context, index) => const TransportDataCard(),
               ),
             ),
-            // CustomTransportTimeCard()
           ],
         ),
         Positioned(
-          bottom: 32.h, // تحريك العنصر للخروج من الإطار
-          left: MediaQuery.of(context).size.width / 2 - 125, // منتصف الشاشة
+          bottom: 32.h,
+
+          /// تحريك العنصر للخروج من الإطار
+          left: MediaQuery.of(context).size.width / 2 - 125,
+
+          /// منتصف الشاشة
           child: const Row(children: [SortButton(), FilterButton()]),
         ),
-      ],
-    );
-  }
-}
-
-class TransportDataCard extends StatelessWidget {
-  const TransportDataCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.w),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'مركز 1',
-                style: TextStyle(
-                  color: kDartTextColor,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              Text(
-                '123',
-                style: TextStyle(
-                  color: kDartTextColor,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              Container(
-                width: 40.w,
-                height: 40.h,
-                decoration: ShapeDecoration(
-                  color: kMainExtrimeLightColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5.r),
-                  ),
-                ),
-                child: editAndDeletePopupMenuButton(context),
-              ),
-            ],
-          ),
-        ),
-        const Divider(color: kMainColorLightColor),
       ],
     );
   }

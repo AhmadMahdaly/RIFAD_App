@@ -23,7 +23,7 @@ class ServicesTabWidget extends StatelessWidget {
           color: const Color(0xFFFCFCFC),
           shape: RoundedRectangleBorder(
             side: const BorderSide(width: 0.50, color: Color(0xFFE9EAEB)),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8.r),
           ),
           shadows: const [
             BoxShadow(color: kShadowColor, blurRadius: 4, offset: Offset(2, 2)),
